@@ -28,7 +28,7 @@
 <div ng-repeat="detail in main.dt1 | filter:search_query" ng-if="$index % 4==0" class="row ghhh"">
    <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'">  <div class="videos">
 
-    <a href="/test" ng-click="main.reloadRoute(main.dt1[$index])" class="video">
+    <a href="/test/{{main.dt1[$index].vlink}}" ng-click="main.reloadRoute(main.dt1[$index])" class="video">
            <span></span>
             <img src="/images/{{main.dt1[$index].imgpath}}" alt="Smiley face">
           </a>
@@ -38,7 +38,7 @@
                              </div>
     </div></div>
    <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'"><div class="videos">
-         <a ng-click="main.reloadRoute(main.dt1[$index+1])" href="/test" class="video">
+         <a ng-click="main.reloadRoute(main.dt1[$index+1])" href="/test/{{main.dt1[$index+1].vlink}}" class="video">
              <span></span>
             <img src="/images/{{main.dt1[$index+1].imgpath}}" alt="Smiley face">
          </a>
@@ -47,7 +47,7 @@
                             </div>
      </div></div>
   <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'"><div class="videos">
-        <a ng-click="main.reloadRoute(main.dt1[$index+2])" href="/test" class="video">
+        <a ng-click="main.reloadRoute(main.dt1[$index+2])" href="/test/{{main.dt1[$index+2].vlink}}" class="video">
             <span></span>
           <img src="/images/{{main.dt1[$index+2].imgpath}}" alt="Smiley face">
         </a>
@@ -56,7 +56,7 @@
                            </div>
     </div></div>
   <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'"><div class="videos">
-        <a ng-click="main.reloadRoute(main.dt1[$index+3])" href="/test" class="video">
+        <a ng-click="main.reloadRoute(main.dt1[$index+3])" href="/test/{{main.dt1[$index+3].vlink}}" class="video">
             <span></span>
             <img src="/images/{{main.dt1[$index+3].imgpath}}" alt="Smiley face">
         </a>
