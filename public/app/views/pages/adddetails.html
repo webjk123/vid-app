@@ -1,0 +1,44 @@
+
+<form ng-submit="adddetails.addDetails(addData);">
+  <div class="page-header">
+  Add Details Page
+  </div>
+<label> Name </label>
+  <input class="form-control" type="text" name="imgpath" placeholder="Please Enter image source" ng-model="adddetails.addData.imgpath">
+  <br>
+  <input class="form-control" type="text" name="vlink" placeholder="Please Enter video link" ng-model="adddetails.addData.vlink">
+<br>
+<input class="form-control" type="text" name="piccaption" placeholder="Please Enter pic caption" ng-model="adddetails.addData.piccaption">
+<br>
+  <select ng-model="adddetails.addData.sitem"
+          ng-options="item.vidtype as item.vidtype for item in main.dt2" name="sitem">
+      <option value="">Select Account</option>
+  </select>
+  <br/>
+<!-- <label> Email </label>
+<input class="form-control" type="text" name="email"  placeholder="Please Enter email" ng-model="register.regData.email">
+<br>
+<label> UserName </label>
+<input class="form-control"  type="text" name="username" placeholder="Please Enter username" ng-model="register.regData.username">
+<br>
+
+<label> Password </label>
+<input class="form-control" type="password" name="password"  placeholder="Please Enter password" ng-model="register.regData.password"> -->
+<br>
+<button class="btn btn-primary" type="submit">Add Data</button>
+
+<br>
+<!-- <div class="jumbotron text-center" ng-show="adddetails.loading">
+<span class="glyphicon glyphicon-repeat spinner" ></span>
+<p>Loading...</p>
+</div> -->
+<br>
+ <div class="row show-hide-message" ng-show="adddetails.successMsg">
+<div class="alert alert-success">{{ adddetails.successMsg }}</div>
+</div>
+<div class="row show-hide-message" ng-show="adddetails.errorMsg">
+<div class="alert alert-danger">{{ adddetails.errorMsg }}
+</div>
+</div>
+
+</form>

@@ -1,0 +1,5 @@
+<div ng-repeat="detail in main.dt1 | filter:search_query" ng-if="$index % 3==0" class="row"">
+<div class="col-md-4" ng-if="main.dt1[$index].sitem == 'Food'"><h1>{{$index}}{{main.dt1[$index].sitem}}</h1><youtube-video video-id="main.dt1[$index].name"></youtube-video></div>
+<div class="col-md-4" ng-if="main.dt1[$index].sitem == 'Food'"><h1>{{$index+1}}{{main.dt1[$index+1].sitem}}</h1><youtube-video video-id="main.dt1[$index+1].name"></youtube-video></div>
+<div class="col-md-4" ng-if="main.dt1[$index].sitem == 'Food'"><h1>{{$index+2}}{{main.dt1[$index+2].sitem}}</h1><youtube-video video-id="main.dt1[$index+2].name"></youtube-video> </div>
+</div>

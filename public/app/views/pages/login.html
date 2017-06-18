@@ -1,0 +1,298 @@
+<!-- <div class="page-header">
+Login Page
+</div>
+<form ng-submit="Login.loginUser(loginData);">
+<label> UserName </label>
+<input class="form-control"  type="text" name="username" placeholder="Please Enter username" ng-model="Login.loginData.username">
+<br>
+
+<label> Password </label>
+<input class="form-control" type="password" name="password"  placeholder="Please Enter password" ng-model="Login.loginData.password">
+<br>
+<button class="btn btn-primary" type="submit">login</button>&nbsp
+<button type="button" class="btn btn-success" ng-click="main.facebook();">Facebook</button>
+</form>
+
+<br>
+<div class="jumbotron text-center" ng-show="Login.loading">
+<span class="glyphicon glyphicon-repeat spinner" ></span>
+<p>Loading...</p>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="Login.successMsg">
+<div class="alert alert-success">{{ Login.successMsg }}</div>
+</div>
+<div class="row show-hide-message" ng-show="Login.errorMsg">
+<div class="alert alert-danger">{{ Login.errorMsg }}
+</div>
+</div>
+<div class="row show-hide-message" ng-show="facebook.errorMsg">
+<div class="alert alert-danger">{{ facebook.errorMsg }}</div>
+</div> -->
+<!-- <div class="container">
+
+        <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" ng-submit="Login.loginUser(loginData);" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Please Enter username" ng-model="Login.loginData.username">
+                  </div>
+									<div class="form-group">
+		  <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Please Enter password" ng-model="Login.loginData.password">
+     </div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+											  <button class="btn btn-primary" type="submit">login</button>
+                         <button type="button" class="btn btn-success" ng-click="main.facebook();">Facebook</button>
+                      </div>
+                      </div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+                  <br>
+                  <div class="jumbotron text-center" ng-show="Login.loading">
+                  <span class="glyphicon glyphicon-repeat spinner" ></span>
+                  <p>Loading...</p>
+                  </div>
+                  <br>
+                  <div class="row show-hide-message" ng-show="Login.successMsg">
+                  <div class="alert alert-success">{{ Login.successMsg }}</div>
+                  </div>
+                  <div class="row show-hide-message" ng-show="Login.errorMsg">
+                  <div class="alert alert-danger">{{ Login.errorMsg }}
+                  </div>
+                  </div>
+                  <div class="row show-hide-message" ng-show="facebook.errorMsg">
+                  <div class="alert alert-danger">{{ facebook.errorMsg }}</div>
+                  </div>
+                </form>
+		hhh						<form ng-submit="main.regUser(regData);" id="register-form" role="form" style="display: none;">
+									<div class="form-group">
+              <input type="text" ng-model="main.regData.name" name="name" id="username" tabindex="1" class="form-control" placeholder="Please Enter name" value="">
+             </div>
+									<div class="form-group">
+	<input type="text" name="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Please Enter email" ng-model="main.regData.email">
+   </div>
+   <div class="form-group">
+   <input type="text" name="username" name="email" id="email" tabindex="1" class="form-control" ng-model="main.regData.username" placeholder="Please Enter username" ng-model="register.regData.email">
+   </div>
+
+<div class="form-group">
+<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Please Enter password" ng-model="main.regData.password">
+</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+             <button class="btn btn-primary" type="submit">Register</button>
+											</div>
+										</div>
+									</div>
+
+                <br>
+                <div class="jumbotron text-center" ng-show="main.loading">
+                <span class="glyphicon glyphicon-repeat spinner" ></span>
+                <p>Loading...</p>
+                </div>
+                <br>
+                <div class="row show-hide-message" ng-show="main.successMsg">
+                <div class="alert alert-success">{{ main.successMsg }}</div>
+                </div>
+                <div class="row show-hide-message" ng-show="main.errorMsg">
+                <div class="alert alert-danger">{{ main.errorMsg }}
+                </div>
+                </div>
+             </form>
+              </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div> -->
+<div class="container">
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Sign In</div>
+                    <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                </div>
+
+                <div style="padding-top:30px" class="panel-body" >
+
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                    <form id="loginform" ng-submit="Login.loginUser(loginData);" class="form-horizontal" role="form">
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email" ng-model="Login.loginData.username">
+	</div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="login-password" type="password" class="form-control" name="password" placeholder="password" ng-model="Login.loginData.password">
+    </div>
+      <div class="input-group">
+                                  <div class="checkbox">
+                                    <label>
+                                      <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                    </label>
+                                  </div>
+                                </div>
+
+
+                            <div style="margin-top:10px" class="form-group">
+                                <!-- Button -->
+
+                                <div class="col-sm-12 controls">
+                                   <button class="btn btn-primary" type="submit">login</button>
+                                  <a id="btn-fblogin" href="#" class="btn btn-primary" ng-click="main.facebook();">Login with Facebook</a>
+                                  <!-- <button class="btn btn-primary" type="submit">login</button>
+                                   <button type="button" class="btn btn-success" ng-click="main.facebook();">Facebook</button> -->
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                        Don't have an account!
+                                    <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                        Sign Up Here
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                           <br>
+                            <div class="jumbotron text-center" ng-show="Login.loading">
+                            <span class="glyphicon glyphicon-repeat spinner" ></span>
+                            <p>Loading...</p>
+                            </div>
+                            <br>
+                            <div class="row show-hide-message" ng-show="Login.successMsg">
+                            <div class="alert alert-success">{{ Login.successMsg }}</div>
+                            </div>
+                            <div class="row show-hide-message" ng-show="Login.errorMsg">
+                            <div class="alert alert-danger">{{ Login.errorMsg }}
+                            </div>
+                            </div>
+                            <div class="row show-hide-message" ng-show="facebook.errorMsg">
+                            <div class="alert alert-danger">{{ facebook.errorMsg }}</div>
+                            </div>
+                        </form>
+
+
+
+                    </div>
+                </div>
+    </div>
+    <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign Up</div>
+                        <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                    </div>
+                    <div class="panel-body" >
+                       <form id="signupform" ng-submit="main.regUser(regData);" class="form-horizontal" role="form">
+
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="name" class="col-md-3 control-label">Name</label>
+                                <div class="col-md-9">
+                            <input ng-model="main.regData.name" type="text" class="form-control" name="name" placeholder="Please Enter name" value="">
+
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label for="email" class="col-md-3 control-label">Email</label>
+                                <div class="col-md-9">
+      <input type="text" class="form-control" name="email" placeholder="Email Address" ng-model="main.regData.email">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="username" class="col-md-3 control-label">User Name</label>
+                                <div class="col-md-9">
+<input type="text" class="form-control" name="username" ng-model="main.regData.username" placeholder="Please Enter username" placeholder="UserName">
+</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" name="password" placeholder="Password" placeholder="Please Enter password" ng-model="main.regData.password">
+                                </div>
+                            </div>
+
+                      <div class="form-group">
+                                <!-- Button -->
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+
+                                    <span style="margin-left:8px;">or</span>
+                                </div>
+                            </div>
+
+                            <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="jumbotron text-center" ng-show="main.loading">
+                            <span class="glyphicon glyphicon-repeat spinner" ></span>
+                            <p>Loading...</p>
+                            </div>
+                            <br>
+                            <div class="row show-hide-message" ng-show="main.successMsg">
+                            <div class="alert alert-success">{{ main.successMsg }}</div>
+                            </div>
+                            <div class="row show-hide-message" ng-show="main.errorMsg">
+                            <div class="alert alert-danger">{{ main.errorMsg }}
+                            </div>
+                            </div>
+
+
+                        </form>
+                     </div>
+                </div>
+
+
+
+
+     </div>
+</div>

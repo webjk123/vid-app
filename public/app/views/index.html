@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+<base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="/assets/js/angular.js"></script>
+    <script src="/assets/js/angular-route.js"></script>
+      <script src="/assets/js/angular-toArrayFilter/toArrayFilter.js"></script>
+    <script src="app/app.js"></script>
+   <script src="app/routes.js"></script>
+   <script src="app/controller/userCtrl.js"></script>
+    <script src="app/directives/filemodel.js"></script>
+   <script src="app/service/userServices.js"></script>
+   <script src="app/service/authServices.js"></script>
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css" >
+  <link href="assets/css/small-business.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<!-- <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet"> -->
+<link href="assets/css/video-js.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="mainCtrl as main">
+
+    <!-- Navigation -->
+    <!-- Navigation -->
+
+    <!-- vertical column start -->
+
+    <nav class="navbar navbar-inverse ">
+    	<div class="container-fluid" >
+    		<div class="navbar-header">
+          <a id="menu-toggle" href="#" class="navbar-toggle ">
+              <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+          </a>
+          <a class="cdc hidden-sm hidden-md hidden-lg" href="/">Home</a>
+           <a  class="cdc hidden-sm hidden-md hidden-lg" ng-click="main.reloadRoutee()" ng-show="!main.isloggedin" href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            <a class="cdc hidden-sm hidden-md hidden-lg" ng-show="main.isloggedin" href="#" ng-click="main.logout();">logout</a>
+          </div>
+          <ul class="nav navbar-nav hidden-xs">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a ng-show="main.isloggedin" href="/addvid">Add videos</a></li>
+                <li><a ng-show="main.isloggedin" href="/adddetails">Add Details</a></li>
+                <li>
+                <a ng-show="main.isloggedin" href="#" ng-click="main.logout();">logout</a>
+                </li>
+                <!-- <li class="visible-xs"><a ng-show="!main.isloggedin" href="/regst"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li class="visible-xs"><a ng-show="!main.isloggedin" href="/login" ng-click="main.reloadRoutee()""><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+                </ul>
+
+
+                 <ul class="nav navbar-nav navbar-right">
+
+               <li><a class="hidden-sm hidden-xs"  ng-click="main.reloadRoutee()" ng-show="!main.isloggedin" href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+               </ul>
+          </div>
+
+        <div id="sidebar-wrapper" class="sidebar-toggle">
+    			<ul class="sidebar-nav">
+    		    	<li>
+    		      		<a href="/India"><h4>Trending</h4></a>
+    		    	</li>
+    		    	<li>
+    		      		<a href="/adddetails"><h4>Entertainment</h4></a>
+    		    	</li>
+            <li>
+    		      		<a href="/upload"><h4>Comedy</h4></a>
+    		    </li>
+            <li>
+    		      	<a href="/upload"><h4>Sports</h4></a>
+    		    </li>
+            <li>
+    		      		<a href="/wild"><h4>Wildlife</h4></a>
+    		    </li>
+            <li>
+    		      		<a href="/upload"><h4>Trailers</h4></a>
+    		    	</li>
+            <!-- <li class="dropdown lead navbar-left"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Video<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="/comedy">Comedy</a></li>
+                              <li><a href="/India">India</a></li>
+                              <li><a href="/Inspirational">Inspirational</a></li>
+                              <li><a href="/politics">Politics</a></li>
+                              <li><a href="/Songs">Songs</a></li>
+                              <li><a href="/technology">Technology</a></li>
+                              <li><a href="/Food">Food</a></li>
+                            </ul>
+                          </li> -->
+              </ul>
+    		</div>
+      	</div>
+      </nav>
+
+  <!-- vertical column ends -->
+
+    <!-- Page Content -->
+    <!-- <div class="container"> -->
+
+        <!-- Heading Row -->
+
+        <!-- /.row -->
+<!-- <hr> -->
+          <!-- Footer -->
+
+      <div ng-view></div>
+
+<form>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer></form>
+</div>
+    <!-- /.container -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"/> -->
+
+    <script src="/assets/js/jquery.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+   <!-- <script src="/assets/js/angular-youtube-embed.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/angular.youtube-embed/1.7.10/ng-youtube-embed.min.js"></script> -->
+  <script src="app/js/ng-youtube-embed.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+   <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://vjs.zencdn.net/5.19.2/video.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.4.0/Youtube.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+   <script src="app/controller/mainCtrl.js"></script>
+   <script src="app/controller/testcontroller.js"></script>
+   <script src="/assets/js/custom.js"></script>
+</body>
+
+</html>

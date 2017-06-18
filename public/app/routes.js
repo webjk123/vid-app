@@ -1,0 +1,124 @@
+var app = angular.module('appRoutes',['ngRoute'])
+.config(function($locationProvider,$routeProvider){
+  $locationProvider.html5Mode({
+    enabled:true
+ });
+    $routeProvider
+    .when('/',{
+      templateUrl:'/app/views/pages/home.html',
+      controller:'mainCtrl',
+      controllerAs:'hm'
+    })
+
+   .when('/test/:url',{
+      templateUrl:'/app/views/pages/test.html',
+        controller:'mainCtrl'
+       })
+       .when('/test2',{
+          templateUrl:'/app/views/pages/test2.html',
+            controller:'mainCtrl'
+           })
+           .when('/test3',{
+              templateUrl:'/app/views/pages/test3.html',
+                controller:'testCtrl',
+                  controllerAs:'jm'
+               })
+               .when('/test4',{
+                  templateUrl:'/app/views/pages/test4.html',
+                    controller:'testCtrl',
+                      controllerAs:'jm'
+                   })
+    .when('/about',{
+      templateUrl:'/app/views/pages/about.html'
+    })
+    .when('/regst',{
+      templateUrl:'/app/views/pages/regstpage.html',
+      controller:'regCtrl',
+      controllerAs:'register',
+       authenticated:false
+    })
+   .when('/login',{
+     templateUrl:'/app/views/pages/login.html',
+     controller:'mainCtrl',
+     controllerAs:'Login'
+   })
+   .when('/logout',{
+     templateUrl:'/app/views/pages/logout.html',
+     authenticated:true
+ })
+
+ .when('/facebook/:token',{
+   templateUrl:'/app/views/pages/users/social/social.html',
+   controller:'facebookCtrl',
+   controllerAs:'facebook'
+})
+.when('/facebookerror',{
+  templateUrl:'app/views/pages/login.html',
+  controller:'facebookCtrl',
+  controllerAs:'facebook'
+})
+.when('/profile',{
+  templateUrl:'app/views/pages/profile.html',
+   authenticated:true
+})
+.when('/adddetails',{
+  templateUrl:'app/views/pages/adddetails.html',
+  controller:'regCtrl',
+  controllerAs:'adddetails',
+   authenticated:true
+})
+.when('/upload',{
+  templateUrl:'app/views/pages/upload.html',
+  controller:'mainCtrl',
+   controllerAs:'upload'
+})
+.when('/addvid',{
+  templateUrl:'app/views/pages/addvid.html',
+  controller:'regCtrl',
+  controllerAs:'addvid'
+})
+.when('/comedy',{
+  templateUrl:'app/views/pages/dropdown/comedy.html'
+})
+.when('/India',{
+  templateUrl:'app/views/pages/dropdown/India.html'
+})
+.when('/Inspirational',{
+  templateUrl:'app/views/pages/dropdown/Inspirational.html'
+})
+.when('/politics',{
+  templateUrl:'app/views/pages/dropdown/politics.html'
+})
+.when('/Songs',{
+  templateUrl:'app/views/pages/dropdown/Songs.html'
+})
+.when('/technology',{
+  templateUrl:'app/views/pages/dropdown/technology.html'
+})
+.when('/Food',{
+  templateUrl:'app/views/pages/dropdown/Food.html'
+})
+.when('/wild',{
+   templateUrl:'app/views/pages/dropdown/wild.html'
+  })
+    .otherwise({
+      redirectTo:'/'
+    });
+});
+app.run(['$rootScope','Auth','$location', function($rootScope,Auth,$location){
+  $rootScope.$on('$routeChangeStart', function(event,next,current){
+    if(next.$$route.authenticated==true){
+      if(!Auth.isLogin()){
+        event.preventDefault();
+        $location.path('/');
+      }
+    }
+  else if(next.$$route.authenticated==false){
+      if(Auth.isLogin()){
+        event.preventDefault();
+        $location.path('/profile');
+      }
+    }
+
+  });
+}]);

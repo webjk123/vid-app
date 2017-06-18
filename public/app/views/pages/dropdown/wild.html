@@ -1,0 +1,70 @@
+<!-- <h1> You are in Profile Page </h1> -->
+
+<!-- <table class="table">
+<video ng-src={{ imageHref | trustUrl }}">
+<tr ng-repeat="detail in main.dt1 | filter:search_query">
+<td><youtube-video video-id="detail.name"></youtube-video></td></tr>
+</table> -->
+
+<!-- <div ng-if="main.dt1[$index].sitem == 'Comedy'"> -->
+<!-- <div class="container-fluid">
+<div ng-repeat="detail in main.dt1 | filter:search_query" ng-if="$index % 4==0" class="row"">
+<div class="col-md-3" ng-if="main.dt1[$index].sitem == 'wild'"><a href="/test" ng-click="main.reloadRoute(main.dt1[$index])" class="video">
+       <span></span>
+        <img src="/images/{{main.dt1[$index].imgpath}}" alt="Smiley face">
+      </a>
+
+      <div class="caption">
+                             <h4>{{main.dt1[$index].piccaption}}</h4>
+                         </div></div>
+<div class="col-md-3" ng-if="main.dt1[$index].sitem == 'wild'"><h1>{{$index+1}}{{main.dt1[$index+1].sitem}}</h1><youtube-video video-id="main.dt1[$index+1].name"></youtube-video></div>
+<div class="col-md-3" ng-if="main.dt1[$index].sitem == 'wild'"><h1>{{$index+2}}{{main.dt1[$index+2].sitem}}</h1><youtube-video video-id="main.dt1[$index+2].name"></youtube-video> </div>
+<div class="col-md-3" ng-if="main.dt1[$index].sitem == 'wild'"><h1>{{$index+2}}{{main.dt1[$index+3].sitem}}</h1><youtube-video video-id="main.dt1[$index+3].name"></youtube-video> </div>
+
+</div>
+</div> -->
+<div class="container-fluid">
+
+<div ng-repeat="detail in main.dt1 | filter:search_query" ng-if="$index % 4==0" class="row ghhh"">
+   <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'">  <div class="videos">
+
+    <a href="/test" ng-click="main.reloadRoute(main.dt1[$index])" class="video">
+           <span></span>
+            <img src="/images/{{main.dt1[$index].imgpath}}" alt="Smiley face">
+          </a>
+
+          <div class="caption">
+                                 <h4>{{main.dt1[$index].piccaption}}</h4>
+                             </div>
+    </div></div>
+   <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'"><div class="videos">
+         <a ng-click="main.reloadRoute(main.dt1[$index+1])" href="/test" class="video">
+             <span></span>
+            <img src="/images/{{main.dt1[$index+1].imgpath}}" alt="Smiley face">
+         </a>
+         <div class="caption">
+                                <h4>{{main.dt1[$index+1].piccaption}}</h4>
+                            </div>
+     </div></div>
+  <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'"><div class="videos">
+        <a ng-click="main.reloadRoute(main.dt1[$index+2])" href="/test" class="video">
+            <span></span>
+          <img src="/images/{{main.dt1[$index+2].imgpath}}" alt="Smiley face">
+        </a>
+        <div class="caption">
+                               <h4>{{main.dt1[$index+2].piccaption}}</h4>
+                           </div>
+    </div></div>
+  <div class="col-6 col-sm-3" ng-if="main.dt1[$index].sitem == 'wild'"><div class="videos">
+        <a ng-click="main.reloadRoute(main.dt1[$index+3])" href="/test" class="video">
+            <span></span>
+            <img src="/images/{{main.dt1[$index+3].imgpath}}" alt="Smiley face">
+        </a>
+        <div class="caption">
+                               <h4>{{main.dt1[$index+3].piccaption}}</h4>
+                           </div>
+    </div></div>
+
+</div>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="page-header">
+Add Details Page
+</div>
+<form ng-submit="addvid.addVid(addvid);">
+
+
+  <label> Name </label>
+  <input class="form-control" type="text" name="vidtype" placeholder="Please Enter videotype" ng-model="addvid.addviid.vidtype">
+
+  <br/>
+
+<br>
+<button class="btn btn-primary" type="submit">Add Video Type</button>
+</form>
+
+<br>
+
+<br>
+ <div class="row show-hide-message" ng-show="addvid.successMsg">
+<div class="alert alert-success">{{ addvid.successMsg }}</div>
+</div>
+<div class="row show-hide-message" ng-show="addvid.errorMsg">
+<div class="alert alert-danger">{{ addvid.errorMsg }}
+</div>
+</div>
