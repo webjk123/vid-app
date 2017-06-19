@@ -101,6 +101,9 @@ var app = angular.module('appRoutes',['ngRoute'])
 .when('/wild',{
    templateUrl:'app/views/pages/dropdown/wild.html'
   })
+  .when('/Comedy',{
+     templateUrl:'app/views/pages/dropdown/comedy.html'
+    })
     .otherwise({
       redirectTo:'/'
     });
